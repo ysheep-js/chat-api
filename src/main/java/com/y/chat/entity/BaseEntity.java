@@ -33,7 +33,7 @@ public class BaseEntity {
     private Integer updateId;
 
     @TableLogic
-    private Integer delete;
+    private Integer isDelete;
 
     private Integer state;
 }

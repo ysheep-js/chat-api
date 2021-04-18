@@ -125,14 +125,14 @@ public class CodeGenerator {
         strategy.setNaming(NamingStrategy.underline_to_camel);
         strategy.setColumnNaming(NamingStrategy.underline_to_camel);
         strategy.setSuperEntityClass("com.y.chat.entity.BaseEntity");
-        strategy.setSuperEntityColumns("delete", "create_time", "update_time", "create_id", "update_id", "state");
+        strategy.setSuperEntityColumns("is_delete", "create_time", "update_time", "create_id", "update_id", "state");
         strategy.setEntityLombokModel(true);
-        strategy.setRestControllerStyle(false);
+        strategy.setRestControllerStyle(true);
         // 公共父类
         strategy.setInclude("chat,chat_content,chat_user,user,user_detail".split(","));
         strategy.setControllerMappingHyphenStyle(true);
         //逻辑删除
-        strategy.setLogicDeleteFieldName("delete");
+        strategy.setLogicDeleteFieldName("is_delete");
         //自动填充
         ArrayList<TableFill> tableFills = new ArrayList<>();
         TableFill createTime = new TableFill("create_time", FieldFill.INSERT);

@@ -13,4 +13,4 @@ mybatis-plus:
   type-aliases-package: com.y.chat.entity
 logging:
   level:
-    com.imooc.project.mapper: trace
+    com.y.chat.mapper: trace

@@ -26,7 +26,6 @@ public class UserController {
     @Autowired
     UserServiceImpl userService;
 
-
     @GetMapping("/login")
     public BaseControllerResponse login(@RequestParam("username") String username,
                                         @RequestParam("password") String password) {

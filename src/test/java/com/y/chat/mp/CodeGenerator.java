@@ -129,11 +129,11 @@ public class CodeGenerator {
         strategy.setEntityLombokModel(true);
         strategy.setRestControllerStyle(true);
         // 公共父类
-        strategy.setInclude("chat,chat_content,chat_user,user,user_detail".split(","));
+        strategy.setInclude("chat,message,chat_user,user,user_detail".split(","));
         strategy.setControllerMappingHyphenStyle(true);
-        //逻辑删除
+        // 逻辑删除
         strategy.setLogicDeleteFieldName("is_delete");
-        //自动填充
+        // 自动填充
         ArrayList<TableFill> tableFills = new ArrayList<>();
         TableFill createTime = new TableFill("create_time", FieldFill.INSERT);
         TableFill modifiedTime = new TableFill("update_time", FieldFill.UPDATE);

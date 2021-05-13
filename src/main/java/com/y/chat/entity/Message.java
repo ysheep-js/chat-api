@@ -2,13 +2,14 @@ package com.y.chat.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+import java.time.LocalDateTime;
 import com.y.chat.entity.BaseEntity;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 /**
  * <p>
- * 
+ * 信息表
  * </p>
  *
  * @author xxx
@@ -16,45 +17,47 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = true)
-public class UserDetail extends BaseEntity {
+public class Message extends BaseEntity {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * 主键
-     */
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
     /**
-     * user表id
+     * 会话id唯一标识符
      */
-    private Integer userId;
+    private String messageId;
 
     /**
-     * 头像
+     * 会话id
      */
-    private String avatar;
+    private Integer chatId;
 
     /**
-     * 昵称
+     * 发送者用户id
      */
-    private String nickname;
+    private Integer fromUserId;
 
     /**
-     * 签名
+     * 接收者用户id
      */
-    private String signature;
+    private Integer toUserId;
 
     /**
-     * 电话号码
+     * 内容
      */
-    private String telephone;
+    private String content;
 
     /**
-     * 邮箱
+     * 消息类型：1-普通消息
      */
-    private String mail;
+    private Integer massageType;
+
+    /**
+     * 发送时间
+     */
+    private LocalDateTime sendTime;
 
 
 }

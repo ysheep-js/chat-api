@@ -12,7 +12,7 @@ import lombok.EqualsAndHashCode;
  * </p>
  *
  * @author xxx
- * @since 2021-04-18
+ * @since 2021-05-13
  */
 @Data
 @EqualsAndHashCode(callSuper = true)
@@ -31,6 +31,21 @@ public class ChatUser extends BaseEntity {
      * 1-群主 0-群员
      */
     private Integer isModerator;
+
+    /**
+     * 最后阅读消息id
+     */
+    private Integer lastMessageId;
+
+    /**
+     * 最后阅读信息时间
+     */
+    private Integer lastMessageTime;
+
+    /**
+     * 备注
+     */
+    private String remark;
 
 
 }

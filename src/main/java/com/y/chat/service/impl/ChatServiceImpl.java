@@ -8,11 +8,11 @@ import org.springframework.stereotype.Service;
 
 /**
  * <p>
- *  服务实现类
+ * 会话表 服务实现类
  * </p>
  *
  * @author xxx
- * @since 2021-04-18
+ * @since 2021-05-13
  */
 @Service
 public class ChatServiceImpl extends ServiceImpl<ChatMapper, Chat> implements ChatService {

@@ -8,16 +8,15 @@ import com.y.chat.service.impl.UserServiceImpl;
 import com.y.chat.tool.BaseControllerResponse;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 /**
  * <p>
- * 前端控制器
+ *  前端控制器
  * </p>
  *
  * @author xxx
- * @since 2021-04-18
+ * @since 2021-05-13
  */
 @RestController
 @RequestMapping("/user")
